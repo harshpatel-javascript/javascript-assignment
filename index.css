@@ -3,41 +3,65 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --container-bg-color: #f1f2f4;
+  --box-shadow-color: rgba(46, 46, 46, 1);
+  --screen-bg-color : rgb(242, 242, 242);
+  --btn-hover-color :rgb(188, 226, 248);
+  --dropdownMenu-color: rgb(213, 235, 248);
+  --equal-operator: #92c2e8;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
+
 }
 .container {
   margin: 3rem auto;
   width: 333px;
+  background-color: var(--container-bg-color);
 }
 .main {
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-content: center;
-  box-shadow: 5px -1px 19px 0px rgba(46, 46, 46, 1);
+  box-shadow: 5px -1px 19px 0px var(--box-shadow-color);
 }
 .calc-screen {
-  height: 70px;
+  height: 85px;
+  border: none;
   font-size: 40px;
   padding: 1rem;
   text-align: right;
   width: 333px;
-  background-color: antiquewhite;
+  background-color: var(--screen-bg-color) ;
+  overflow: scroll hidden;
+}
+.button-grid .row{
+  background-color: var(--screen-bg-color);
 }
 .row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  background-color: rgb(246, 246, 246);
 }
 .btn {
   text-align: center;
   padding: 0.5rem 1rem;
 }
 .btn:hover{
-  background-color: rgb(188, 226, 248);
-  box-shadow: 7px 7px 5px -3px rgba(56,56,56,0.75);
+  background-color: var(--btn-hover-color);
+  box-shadow: 7px 7px 5px -3px var(--box-shadow-color);
   border-radius: 5px;
+}
+.btn-deg, 
+.btn-fe {
+  font-weight: bold;
+}
+.memory{
+  font-weight: bold;
 }
 .column-2,
 .column-3 {
@@ -46,7 +70,9 @@ body {
 }
 .dropdown {
   position: relative;
-  display: inline-block;
+}
+.dropdown button{
+  border: none;
 }
 .dropdownBtn::after {
   content: "";
@@ -59,10 +85,17 @@ body {
   width: 100px;
   position: absolute;
   left: 1rem;
-  background-color: rgb(179, 187, 151);
+  background-color: var(--dropdownMenu-color) ;
 }
 .show {
   display: block;
+}
+.hide{
+  display: none;
+}
+.color{
+  background-color: var(--btn-hover-color);
+  border-radius: 5px;
 }
 .dropdown:hover {
   display: block;
@@ -81,5 +114,5 @@ body {
   font-weight: bold;
 }
 #equal {
-  background-color: rgb(0, 90, 143);
+  background-color: var(--equal-operator);
 }
