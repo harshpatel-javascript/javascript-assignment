@@ -1,15 +1,15 @@
 //selecting various elements
-let btns = document.querySelectorAll(".btn");
-let number = document.querySelectorAll(".number");
-let operator = document.querySelectorAll(".operator");
-let equal = document.querySelector("#equal");
-let screen = document.querySelector(".calc-screen");
-let backspace = document.querySelector("#backspace");
-let del = document.querySelector("#clear");
-let deg = document.querySelector("#deg");
-let functionButton = document.querySelector(".functionBtn");
-let trigoButton = document.querySelector(".trigonometryFunction");
-let second = document.querySelector("#second");
+const btns = document.querySelectorAll(".btn");
+const number = document.querySelectorAll(".number");
+const operator = document.querySelectorAll(".operator");
+const equal = document.querySelector("#equal");
+const screen = document.querySelector(".calc-screen");
+const backspace = document.querySelector("#backspace");
+const del = document.querySelector("#clear");
+const deg = document.querySelector("#deg");
+const functionButton = document.querySelector(".functionBtn");
+const trigoButton = document.querySelector(".trigonometryFunction");
+const second = document.querySelector("#second");
 
 //initialization of screen value
 screen.innerHTML= "";
