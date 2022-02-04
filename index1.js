@@ -7,8 +7,8 @@ const screen = document.querySelector(".calc-screen");
 const backspace = document.querySelector("#backspace");
 const del = document.querySelector("#clear");
 const deg = document.querySelector("#deg");
-const functionButton = document.querySelector(".functionBtn");
-const trigoButton = document.querySelector(".trigonometryFunction");
+const functionButton = document.querySelector(".function-btn");
+const trigoButton = document.querySelector(".trigonometry-function");
 const second = document.querySelector("#second");
 
 //initialization of screen value
@@ -75,7 +75,7 @@ function eventList(e){
         screen.innerHTML*= 3.14; 
       }
       break;
-    case "positiveNegitive":
+    case "positive-negitive":
       if(screen.innerHTML === ""){
         alert("Please enter the number");
       }
@@ -110,17 +110,17 @@ function eventList(e){
     case "root":
       screen.innerHTML= Math.sqrt(screen.innerHTML);
       break;
-    case "openParenthesis":
+    case "open-parenthesis":
       screen.innerHTML+= "(";
       break;
-    case "closeParenthesis":
+    case "close-parenthesis":
       screen.innerHTML+= ")";
       break;
     case "power":
       screen.innerHTML+= "^";
       break;
     case "base10":
-      screen.innerHTML+= "^";
+      screen.innerHTML = Math.pow(10,screen.innerHTML);
       break;
     case "log":
       if(screen.innerHTML === ""){
@@ -140,19 +140,19 @@ function eventList(e){
     case "factorial":
       screen.innerHTML= factorialFunc(screen.innerHTML);
       break;
-    case "memoryClear":
+    case "memory-clear":
       memoryClear();
       break;
-    case "memoryPlus":
+    case "memory-plus":
       memoryPlus(screen.innerHTML);
       break;
-    case "memoryMinus":
+    case "memory-minus":
       memoryMinus();
       break;
-    case "memoryStored":
+    case "memory-stored":
       screen.innerHTML= memoryStored();
       break;
-    case "memoryRecall":
+    case "memory-recall":
       screen.innerHTML = memoryRecall();
       break;
     case "power3":
@@ -163,7 +163,7 @@ function eventList(e){
         screen.innerHTML = Math.pow(screen.innerHTML ,3);
       }
       break;
-    case "qubeRoot": 
+    case "qube-root": 
       if(screen.innerHTML.includes("-")){
         screen.innerHTML = (-1) * Math.pow((-1) * screen.innerHTML , 1/3);
       }
@@ -171,7 +171,7 @@ function eventList(e){
         screen.innerHTML = Math.pow(screen.innerHTML , 1/3);
       }
       break;
-    case "xRootY":
+    case "x-root-y":
       screen.innerHTML += "^";
       break;
     case "base2":
@@ -180,7 +180,7 @@ function eventList(e){
     case "log2":
       screen.innerHTML = Math.log2(screen.innerHTML);
       break;
-    case "baseE":
+    case "base-e":
       screen.innerHTML = Math.pow(Math.E, screen.innerHTML);
       break;
   }
@@ -282,13 +282,6 @@ function factorialFunc(n){
       return n * factorialFunc(n-1);
     }
   }
-}
-//10^x function
-function powerOfTen(num){
-  let b;
-  b = num.slice(num.indexOf("^") + 1);
-  return Math.pow(10,b);
-
 }
 //adding to the screen
 number.forEach((number) => {
