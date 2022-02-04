@@ -74,13 +74,13 @@ body {
 .dropdown button{
   border: none;
 }
-.dropdownBtn::after {
+.dropdown-btn::after {
   content: "";
   background: url("./down-arrow.png");
   height: 12px;
   width: 16px;
 }
-.dropdownMenu {
+.dropdown-menu {
   display: none;
   width: 100px;
   position: absolute;
